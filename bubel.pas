@@ -1,11 +1,11 @@
 program bubel;
-const arrLenght=10;
-var i, j, k:integer; 
+const arrLength=10;
+var i,j,k:integer; 
 arr:array[1..10] of integer; 
 begin
 writeln ('Изначальный массив');
-for i:=1 to arrLenght do begin
-  arr[i]:=random(arrLenght); 
+for i:=1 to arrLength do begin
+  arr[i]:=random(arrLength); 
   write(arr[i], ' ');
 end;
 
