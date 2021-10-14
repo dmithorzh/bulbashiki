@@ -19,7 +19,7 @@ for i:=1 to 10-1 do begin
   end;
 end;
 
-writeln ('  ');
+writeln ();
 writeln ('Отсортированный массив');
   for i:=1 to 10 do
   write(arr[i], ' ');
