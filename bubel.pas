@@ -1,21 +1,24 @@
-﻿var a, b, c :integer; 
-m:array[1..10] of integer; 
+program bubel;
+const a=10;
+var i, j, k :integer; 
+arr:array[1..10] of integer; 
 begin
 writeln ('Изначальный массив');
-for a:=1 to 10 do begin
-m [a]:=random(76); 
-Write(m[a], ' ');
+for i:=1 to a do begin
+  arr[i]:=random(a); 
+  write(arr[i], ' ');
 end;
-for a:=1 to 10-1 do begin
-for b:=1 to 10-a do begin
-if m[b]>m[b+1] then begin
-c:=m[b];
-m[b]:=m[b+1];
-m[b+1]:=c;
+for i:=1 to 10-1 do begin
+  for j:=1 to 10-i do begin
+    if arr[j]>arr[j+1] then begin
+      k:=arr[j];
+      arr[j]:=arr[j+1];
+      arr[j+1]:=k;
+    end;
+  end;
 end;
-end;
-end;
+writeln ('  ');
 writeln ('Отсортированный массив');
-for a:=1 to 10 do
-Write(m[a], ' ');
+for i:=1 to 10 do
+write(arr[i], ' ');
 end.
