@@ -1,13 +1,14 @@
 program bubel;
-const a=10;
-var i, j, k :integer; 
+const arrLenght=10;
+var i, j, k:integer; 
 arr:array[1..10] of integer; 
 begin
 writeln ('Изначальный массив');
-for i:=1 to a do begin
-  arr[i]:=random(a); 
+for i:=1 to arrLenght do begin
+  arr[i]:=random(arrLenght); 
   write(arr[i], ' ');
 end;
+
 for i:=1 to 10-1 do begin
   for j:=1 to 10-i do begin
     if arr[j]>arr[j+1] then begin
@@ -17,8 +18,9 @@ for i:=1 to 10-1 do begin
     end;
   end;
 end;
+
 writeln ('  ');
 writeln ('Отсортированный массив');
-for i:=1 to 10 do
-write(arr[i], ' ');
+  for i:=1 to 10 do
+  write(arr[i], ' ');
 end.
